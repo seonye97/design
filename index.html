@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            mobile web redesign
+        </title>
+        <!--aos head 영역-->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <!--둥둥이-->
+        <link rel="stylesheet" href="css/DB_etc10.css" type="text/css"></link>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+        <script type="text/javascript" src="js/jquery.DB_springMove.min.js"></script>
+        <style type="text/css">
+            body {
+                margin: 0px;
+            }
+
+
+            .wrap {
+                width: 100%;
+                height: 15000px;
+                margin: auto;
+                background: url(img/hgp-mobile.png) no-repeat;
+                overflow: hidden;
+            }
+
+            .aos01 {
+                position: absolute;
+                margin: 157px 0 0 539px;
+                z-index: 999;
+            }
+
+            .aos02 {
+                position: absolute;
+                margin: 1714px 0 0 430px;
+
+            }
+
+            .aos03 {
+                position: absolute;
+                margin: 7721px 0 0 67px;
+            }
+
+            .aos04 {
+                position: absolute;
+                margin: 8769px 0 0 625px;
+            }
+
+            .aos05 {
+                position: absolute;
+                margin: 10059px 0 0 67px;
+            }
+
+            .aos06 {
+                position: absolute;
+                margin: 11563px 0 0 67px;
+            }
+
+            .aos07 {
+                position: absolute;
+                margin: 12284px 0 0 606px;
+            }
+
+            /* #topButton {position: fixed; right: 1%; bottom: -40px; display: none; z-index: 999;}탑버튼 */
+        </style>
+    </head>
+    <body>
+
+
+
+        <div class="wrap">
+
+            <div class="aos02">
+                <img src="img/aos02-resolve.png" data-aos="fade-up">
+            </div>
+
+
+
+            <div class="DB_etc10_2">
+                <div class="aos01">
+                    <img src="img/aos01-main.png">
+                </div>
+            </div>
+
+
+
+            <div class="aos03">
+                <img src="img/aos03-screen.png" data-aos="fade-up">
+            </div>
+
+            <div class="aos04">
+                <img src="img/aos04-screen.png" data-aos="fade-up">
+            </div>
+
+            <div class="aos05">
+                <img src="img/aos05-screen.png" data-aos="fade-up">
+            </div>
+
+            <div class="aos06">
+                <img src="img/aos06-screen.png" data-aos="fade-up">
+            </div>
+
+            <div class="aos07">
+                <img src="img/aos07-screen.png" data-aos="fade-up">
+            </div>
+
+
+
+        </div>
+
+
+
+
+
+
+        <!--aos body 영역-->
+        <script> AOS.init(); </script>
+
+
+        <!--둥둥이 body 영역-->
+        <script>
+
+            $('.DB_etc10_2').DB_springMove({
+                key: 'c65806',                //���̼���Ű
+                dir: 'y',               //������('x','y')
+                mirror: 1,              //�ݴ�����̵�(1,-1)
+                radius: 10,             //�ݰ�
+                motionSpeed: 0.08       //�ӵ�(0~1)
+            })
+
+        </script>
+
+        <script>
+            $('.DB_etc10_1').DB_springMove({
+                key: 'c65806',                //���̼���Ű
+                dir: 'x',               //������('x','y')
+                mirror: 1,              //�ݴ�����̵�(1,-1)
+                radius: 10,             //�ݰ�
+                motionSpeed: 0.1,       //�ӵ�(0~1)
+                over: 'stop'
+            })
+        </script>
+
+
+        <!-- <div class="top_button" id="topButton" style="cursor:pointer">
+        <a style="display:scroll;position:fixed;bottom:50px;right:80px;" href="#" >
+            <img src="img/topbutton.png" id="topButtonImg" id="topButtonImg"></a>
+    </div> -->
+
+
+        <!--플러팅메뉴-->
+        <!-- <script>
+        $(window).scroll(function() {
+        // top button controll
+        if ($(this).scrollTop() > 500) {
+            $('#topButton').fadeIn();
+        } else {
+            $('#topButton').fadeOut();
+        }
+        });
+        
+        $(document).ready(function() {
+        // Top Button click event handler
+        $("#topButtonImg").click(function() {
+            $('html, body').animate({scrollTop:0 }, '500');
+        });
+        });
+        </script> -->
+
+
+
+
+        <style>
+            /* 움직이는 텍스트 */
+            .animated-title {
+                font-size: 60px;
+                font-family: 'Raleway', Sans-serif;
+                font-weight: 300;
+                /* position: absolute; relative */
+                width: 100%;
+                /* max-width:100%; */
+                /* box-sizing: border-box; */
+                height: auto;
+                padding: 70px 0;
+                /*100px 0;*/
+                overflow-x: hidden;
+                overflow-y: hidden;
+                margin-top: -14424px;
+                /*추가함*/
+            }
+
+            .animated-title .track {
+                width: 5776px;
+                /* position: absolute; */
+                white-space: nowrap;
+                will-change: transform;
+                animation: marquee 60s linear infinite;
+            }
+
+            @keyframes marquee {
+                from {
+                    transform: translateX(0);
+                }
+
+                to {
+                    transform: translateX(-50%);
+                }
+            }
+
+            @media (hover: hover) and (min-width: 700px) {
+                .animated-title .content {
+                    -webkit-transform: translateY(calc(100% - 8rem));
+                    transform: translateY(calc(100% - 8rem));
+                }
+            }
+
+            .content {
+                color: #fff;
+                background: #5696ff;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+            }
+        </style>
+
+
+        <div class="animated-title">
+            <div class="track">
+                <div class="content">&nbsp;
+                    <img src="img/scroll-01.png"><img src="img/scroll-02.png"><img src="img/scroll-03.png"><img
+                        src="img/scroll-04.png"><img src="img/scroll-05.png"><img src="img/scroll-06.png"><img
+                        src="img/scroll-07.png"><img src="img/scroll-08.png"><img src="img/scroll-09.png">
+                    <img src="img/scroll-01.png"><img src="img/scroll-02.png"><img src="img/scroll-03.png"><img
+                        src="img/scroll-04.png"><img src="img/scroll-05.png"><img src="img/scroll-06.png"><img
+                        src="img/scroll-07.png"><img src="img/scroll-08.png"><img src="img/scroll-09.png">
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
